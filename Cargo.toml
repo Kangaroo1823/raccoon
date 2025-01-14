@@ -3,6 +3,23 @@ name = "raccoon"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+opt-level = 3
+lto = "fat"
+
+[profile.bench]
+opt-level = 3
+lto = "fat"
+
+[lib]
+name = "racoon_lib"
+path = "src/raccoon_lib/raccoon_lib.rs"
+
+
+[[bin]]
+name = "raccoon_tools"
+path = "src/raccoon_tools/raccoon_tools.rs"
+
 [dependencies]
 
 
