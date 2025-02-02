@@ -127,10 +127,14 @@ pub fn print_bitboard(bitboard: Bitboard) {
 }
 
 
-#[test]
-fn test_bitboard() {
-    let bitboard = set_bit(A1, 0);
-    assert_eq!(bitboard, 1);
-    
-    print_bitboard(bitboard);
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn test_bitboard() {
+        let bitboard = set_bit(A1, 0);
+        assert_eq!(bitboard, 1);
+
+        print_bitboard(bitboard);
+    }
 }
