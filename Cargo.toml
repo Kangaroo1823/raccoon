@@ -20,6 +20,11 @@ path = "src/raccoon_lib/raccoon_lib.rs"
 name = "raccoon_tools"
 path = "src/raccoon_tools/raccoon_tools.rs"
 
+[[bin]]
+name = "raccoon"
+path = "src/main.rs"
+
+
 [dependencies]
 
 
